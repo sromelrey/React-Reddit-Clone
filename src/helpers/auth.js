@@ -9,13 +9,13 @@ const AuthHelper = {
       return false;
     }
 
-    const { token, last_login } = jsonData;
-    const now = moment();
+    // const { token, last_login } = jsonData;
+    // const now = moment();
 
-    if (token && last_login) {
-      const tokenLifeInSeconds = now.diff(moment(new Date(last_login)).toISOString(), 'seconds');
-      //   return tokenLifeInSeconds < config.loginTimeout;
-    }
+    // if (token && last_login) {
+    //   const tokenLifeInSeconds = now.diff(moment(new Date(last_login)).toISOString(), 'seconds');
+    //   //   return tokenLifeInSeconds < config.loginTimeout;
+    // }
 
     return false;
   },

@@ -3,10 +3,12 @@ import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 
 import AuthHelper from './helpers/auth';
 import AuthLayout from './layouts/auth_layout/AuthLayout';
-import LoginPage from './containers/LoginPage';
+import HomePage from './containers/HomePage';
+import SubmissionPage from './containers/SubmissionPage';
 
 const routes = [
-  { path: '/', exact: true, isPrivate: false, Layout: AuthLayout, Component: LoginPage },
+  { path: '/home', exact: true, isPrivate: false, Layout: AuthLayout, Component: HomePage },
+  { path: '/comments/:id/:title/', exact: true, isPrivate: false, Layout: AuthLayout, Component: SubmissionPage },
   // { path: '/', exact: true, isPrivate: true, Component: Projects },
 ];
 
